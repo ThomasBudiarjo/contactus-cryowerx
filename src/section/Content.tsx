@@ -5,8 +5,8 @@ import Input from '../components/Input'
 
 const Content = () => {
   return (
-    <section className='min-h-screen w-full flex flex-col relative'>
-        <h1 className='text-4xl font-bold text-center mt-40 text-black dark:text-white'>
+    <section className='min-h-screen max-w-7xl mx-auto flex flex-col relative'>
+        <h1 className='text-4xl font-bold text-center md:mt-40 mt-28 text-black dark:text-white'>
             Contact Us
         </h1>
         <p className='text-lg text-center mt-4 mb-4 text-black dark:text-white px-4'>
@@ -14,23 +14,23 @@ const Content = () => {
         </p>
         
         <div className='max-w-7xl mx-auto w-full px-4 my-4 md:my-8'>
-            <div className='flex flex-col md:flex-row gap-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-2 md:p-8 w-full h-auto lg:h-[650px]'>
-                <div className='flex bg-gradient-to-br from-black to-slate-700 dark:from-gray-200 dark:to-[#fbfbfb] flex-row px-12 pt-10 pb-6 md:rounded-lg rounded-md h-auto basis-[45%]'>
+            <div className='flex flex-col md:flex-row gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-lg p-2 md:p-8 w-full h-auto lg:h-[650px]'>
+                <div className='flex bg-gradient-to-br from-0% to-75% from-black to-slate-700 dark:from-[#4b749f] dark:to-transparent flex-row px-12 pt-10 pb-6 md:rounded-lg rounded-md h-auto basis-[45%]'>
                     <div className='flex flex-col justify-between h-full gap-10'>
                         <div>
-                            <h3 className='text-2xl font-medium text-white dark:text-slate-900 dark:font-bold'>
+                            <h3 className='text-2xl font-medium text-white'>
                                 Contact Information
                             </h3>
-                            <p className='text-white font-light dark:text-slate-900'>
+                            <p className='text-white font-light'>
                                 Contact us for any inquiries or feedback.
                             </p>
                         </div>
                         <div className='flex flex-col gap-10'>
                             {contactInfo.map((contact, index) => (
                                 <div key={index} className='flex items-center gap-6'>
-                                    <img className='block dark:hidden' src={contact.icon} alt={contact.alt} />
-                                    <img className='hidden dark:block' src={contact.darkIcon} alt={contact.alt} />
-                                    <p className='text-white font-light dark:text-slate-900'>
+                                    <img className='' src={contact.icon} alt={contact.alt} />
+                                    {/* <img className='hidden dark:block' src={contact.darkIcon} alt={contact.alt} /> */}
+                                    <p className='text-white font-light'>
                                         {contact.text}
                                     </p>
                                 </div>
@@ -50,7 +50,7 @@ const Content = () => {
                         <Input label="Email" placeholder="Enter your email" />
                         <Input label="Subject" placeholder="Enter the subject" />
                         <Input label="Message" placeholder="Write your message" textarea />
-                        <a className='group bg-slate-700 dark:bg-[#fbfbfb] text-white text-center dark:text-slate-900 py-4 px-8 rounded-md md:self-end md:min-w-[160px] hover:min-w-[200px] hover:pr-12 hover:bg-slate-600 dark:hover:bg-gray-200 transition-all'>
+                        <a className='group bg-slate-700 dark:bg-inverse text-white text-center py-4 px-8 rounded-md md:self-end md:min-w-[160px] hover:min-w-[200px] hover:pr-12 hover:bg-slate-600 dark:hover:inverse transition-all cursor-pointer'>
                             Send Message <span className="opacity-0 absolute transition-all group-hover:opacity-100 transform group-hover:translate-x-3 translate-x-8 duration-300">➤</span>
                         </a>
                     </form>
