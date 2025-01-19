@@ -48,6 +48,13 @@ To start the application in a production environment using Docker:
 npm run prod:up
 ```
 
+### Production Migration
+
+To run database migrations:
+```bash
+npm run prod:migrate
+```
+
 ### Stop Production Environment
 
 To stop the production environment:
