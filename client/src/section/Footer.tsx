@@ -1,4 +1,3 @@
-import React from 'react'
 import { contactInfo } from '../constants/contact'
 
 const Footer = () => {
@@ -6,7 +5,7 @@ const Footer = () => {
     <section className='w-auto flex flex-col items-center justify-center bg-slate-900 dark:bg-slate-800 pt-16 mt-24'>
         <h1 className='text-3xl font-bold text-white'>My Company</h1>
         <div className='flex gap-4 mt-8 border-t border-white py-10 mx-12'>
-            <div className='flex items-start justify-center gap-24 text-white'>
+            <div className='flex items-start md:justify-center gap-24 text-white flex-wrap'>
                 <div className='flex flex-col flex-start align-start gap-8'>
                     <h4 className='text-md font-medium'>Reach us</h4>
                     {contactInfo.map((contact, index) => (

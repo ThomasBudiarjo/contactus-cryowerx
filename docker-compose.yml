@@ -1,0 +1,23 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:15
+    container_name: cryowerxdev_db
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: contactus-cryowerx
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+  postgres_data:
+    driver: local
