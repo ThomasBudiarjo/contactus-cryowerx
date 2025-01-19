@@ -45,7 +45,7 @@ npm run client
 
 To start the application in a production environment using Docker:
 ```bash
-npm run prod:start
+npm run prod:up
 ```
 
 ### Stop Production Environment
