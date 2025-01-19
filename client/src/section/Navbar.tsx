@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import DarkModeToggle from '../components/DarkModeToggle'
 import { navLinks } from '../constants/navLinks'
 import { useTheme } from '../context/ThemeContext'

@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd api && npm run dev",
     "client": "cd client && npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dci": "docker compose down && docker compose up -d && cd api && npm ci && cd ../client && npm ci",
+    "dci": "docker compose down && docker compose up -d --build && cd api && npm ci && cd ../client && npm ci",
     "migrate": "cd api && npm run migrate",
-    "build": "cd client && npm run build && cd ../api && npm run build"
+    "build": "cd client && npm run build && cd ../api && npm run build",
+    "prod:up": "docker compose -f docker-compose.prod.yml --env-file .env.prod up -d --build",
+    "prod:down": "docker compose -f docker-compose.prod.yml --env-file .env.prod down",
+    "prod:migrate": "docker exec prod_backend npm run migrate"
+
   },
   "keywords": [],
   "author": "",
